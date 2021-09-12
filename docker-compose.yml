@@ -1,0 +1,26 @@
+version: "3.9"
+services :
+  ansible:
+    container_name: ansible
+    build: ./ansible
+
+  web:
+    container_name: web
+    image: ubuntu:20.04
+    command: tail -F anything
+
+  db:
+    container_name: db
+    image: mysql:5.7
+    restart: always
+    ports: 
+      - "3306:3306"
+    environment: 
+      MYSQL_ROOT_PASSWORD: ${PASSWORD}
+
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: always
+    ports: 
+      - "8080:8080"

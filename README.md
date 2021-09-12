@@ -1,0 +1,2 @@
+### Ansible
+Ansible est un outil d'automatisation informatique écrit en Python. Il peut configurer des systèmes, déployer des logiciels et orchestrer des tâches informatiques avancées, telles que des déploiements continus.
